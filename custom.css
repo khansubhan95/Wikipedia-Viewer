@@ -1,0 +1,95 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #151A4F;
+    color: #8122D4;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active:focus {
+    border-color: #8122D4;
+    background-color: #8122D4;
+    color: white;
+    box-shadow: none;
+    outline: none;
+    padding-top: 2.5%;
+    padding-bottom: 3%;
+    border-radius: 0;
+    margin-left: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:active:focus {
+    background-color: white;
+    color: black;
+    border-radius: 0;
+    text-align: left;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+#search-box {
+    font-size: 140%;
+    border-radius: 0;
+    border-color: #151A4F;
+    margin: auto;
+    width: 50%;
+    /*height:5000%;*/
+    padding-top: 2%;
+    padding-bottom: 3%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+#search-box:focus,
+#search-box:active,
+#search-box:visited {
+    color: black;
+    font-size: 140%;
+}
+
+input {
+    color: black;
+}
+
+.footer-p {
+    color:white;
+}
+
+.credit,
+.credit:hover,
+.credit:visited {
+    color:white;
+}
+
+.container {
+  width: auto;
+  max-width: 680px;
+  padding: 0 15px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #151A4F;
+}
