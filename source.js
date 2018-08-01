@@ -1,7 +1,15 @@
-var opening = '<a href="';
-var wikipediaId = "https://en.wikipedia.org/?curid=";
-var closing = '" target="_blank"><button" class="btn btn-primary btn-block">';
-var finalClosing = '</button></a><br>';
+function createResultMarkup(id, title) {
+    return '<a href="https://en.wikipedia.org/?curid=' + id + '" target="_blank"><button" class="btn btn-primary btn-block"><b>' + title + '</b></button></a><br>';
+}
+
+function showResults(results) {
+    $("#wiki-results").empty(); // remove previous results
+    for (var key in results) {
+        if (results.hasOwnProperty(key)) {
+            $("#wiki-results").append(createResultMarkup(results[key].pageid, results[key].title));
+        }
+    }
+}
 
 function getList(query) {
     $.ajax({
@@ -9,13 +17,7 @@ function getList(query) {
         success: function(json) {
             console.log('success');
             console.log(json.continue.gsroffset);
-            var results = json.query.pages;
-            for (var key in results) {
-                if (results.hasOwnProperty(key)) {
-                    $("#wiki-results").append(opening + wikipediaId + results[key].pageid + closing + '<b>' + results[key].title + '</b>' + finalClosing);
-                }
-            }
-
+            showResults(json.query.pages);
         },
         error: function(errorMessage) {
             console.log('error');
